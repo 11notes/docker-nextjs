@@ -38,9 +38,7 @@
   # :: update image
     RUN set -ex; \
       apk --update --no-cache add \
-        rsync; \
-      apk update; \
-      apk upgrade;
+        rsync;
 
   # :: cleanup
     RUN set -ex; \
@@ -57,6 +55,11 @@
       usermod -d ${APP_ROOT} docker; \
       chown -R 1000:1000 \
         ${APP_ROOT};
+
+  # :: update image binaries and empty cache
+    RUN set -ex; \
+      apk --no-cache --update upgrade; \
+      apk cache clean;
 
 # :: Volumes
   VOLUME ["${APP_ROOT_JS}/app", "${APP_ROOT_JS}/public", "${APP_ROOT_JS}/build"]
