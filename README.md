@@ -25,6 +25,13 @@ docker run --name nextjs \
     build
 ```
 
+## Defaults
+| Parameter | Value | Description |
+| --- | --- | --- |
+| `user` | docker | user docker |
+| `uid` | 1000 | user id 1000 |
+| `gid` | 1000 | group id 1000 |
+
 ## Parent
 * [11notes/node:stable](https://github.com/11notes/docker-node)
 
@@ -38,5 +45,6 @@ docker run --name nextjs \
 * [NodeJS](https://nodejs.org/en)
 
 ## Tips
+* Use [11notes/nextjs-cluster](https://github.com/11notes/docker-nextjs-cluster) to run the build output in a cluster on a single or multiple hosts
 * Don't bind to ports < 1024 (requires root), use NAT/reverse proxy
 * [Permanent Storage](https://github.com/11notes/alpine-docker-netshare) - Module to store permanent container data via NFS/CIFS and more
