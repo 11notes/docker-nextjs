@@ -25,7 +25,7 @@
         --import-alias \
         --use-npm; \
       cd ${APP_ROOT_JS}; \
-      sed -i "s@next build@next build \&\& /usr/bin/rsync -az --delete ${APP_ROOT_JS}/.next/standalone/ ${APP_ROOT_JS}/build@" ${APP_ROOT}/js/package.json; \
+      sed -i "s@next build@next build \&\& /usr/bin/rsync -az --delete ${APP_ROOT_JS}/.next/standalone/ ${APP_ROOT_JS}/build@" ${APP_ROOT_JS}/package.json; \
       npm install \
         react-redux \
         @reduxjs/toolkit \
