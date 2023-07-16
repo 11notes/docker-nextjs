@@ -43,7 +43,7 @@ docker run --name nextjs \
 * [Iconify](https://docs.iconify.design/icon-components/react)
 * [Axios](https://www.npmjs.com/package/axios)
 * [Alpine Linux](https://alpinelinux.org)
-* [NodeJS](https://nodejs.org/en)
+* [nodejs](https://nodejs.org/en)
 
 ## Tips
 * Use [11notes/nextjs-cluster](https://github.com/11notes/docker-nextjs-cluster) to run the build output in a cluster on a single or multiple hosts
