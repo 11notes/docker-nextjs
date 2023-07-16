@@ -1,5 +1,6 @@
 # :: Header
   FROM 11notes/node:stable
+  ENV APP_VERSION=13.4.10
   ENV APP_ROOT=/next
   ENV APP_ROOT_JS=${APP_ROOT}/js
 
@@ -9,13 +10,12 @@
   # :: prepare image
     RUN set -ex; \
       npm install -g npm@latest; \
-      mkdir -p /next; \
-      rm -rf /node;
+      mkdir -p /next;
 
   # :: install
     RUN set -ex; \
       cd ${APP_ROOT}; \
-      npx --yes create-next-app@latest \
+      npx --yes create-next-app@${APP_VERSION} \
         js \
         --js \
         --tailwind \
