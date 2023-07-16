@@ -10,7 +10,7 @@
   # :: prepare image
     RUN set -ex; \
       npm install -g npm@latest; \
-      mkdir -p /next;
+      mkdir -p ${APP_ROOT};
 
   # :: install
     RUN set -ex; \
@@ -25,7 +25,7 @@
         --import-alias \
         --use-npm; \
       cd ${APP_ROOT_JS}; \
-      sed -i "s@next build@next build \&\& /usr/bin/rsync -az --delete ${APP_ROOT_JS}/.next/standalone/ ${APP_ROOT_JS}/build@" /next/js/package.json; \
+      sed -i "s@next build@next build \&\& /usr/bin/rsync -az --delete ${APP_ROOT_JS}/.next/standalone/ ${APP_ROOT_JS}/build@" ${APP_ROOT}/js/package.json; \
       npm install \
         react-redux \
         @reduxjs/toolkit \
@@ -54,7 +54,7 @@
 
   # :: set correct permission
     RUN set -ex; \
-      usermod -d /next docker; \
+      usermod -d ${APP_ROOT} docker; \
       chown -R 1000:1000 \
         ${APP_ROOT};
 
