@@ -31,6 +31,7 @@
         @reduxjs/toolkit \
         react-uuid \
         @iconify/react \
+        sass \
         axios \
         web3 \
         flowbite \
