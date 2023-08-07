@@ -1,6 +1,6 @@
 # :: Header
   FROM 11notes/node:stable
-  ENV APP_VERSION=13.4.10
+  ENV APP_VERSION=13.4.13
   ENV APP_ROOT=/next
   ENV APP_ROOT_JS=${APP_ROOT}/js
 
@@ -32,7 +32,9 @@
         sass \
         @iconify/react \
         axios \
-        web3;
+        web3 \
+        flowbite \
+        flowbite-react;
 
   # :: update image
     RUN set -ex; \
