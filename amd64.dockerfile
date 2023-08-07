@@ -30,7 +30,6 @@
         react-icons \
         @reduxjs/toolkit \
         react-uuid \
-        sass \
         @iconify/react \
         axios \
         web3 \
