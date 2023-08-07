@@ -42,6 +42,7 @@ docker run --name nextjs \
 * [Web3](https://www.npmjs.com/package/web3)
 * [Iconify](https://docs.iconify.design/icon-components/react)
 * [Axios](https://www.npmjs.com/package/axios)
+* [Flowbite](https://www.flowbite-react.com/docs/getting-started/nextjs)
 * [Alpine Linux](https://alpinelinux.org)
 * [nodejs](https://nodejs.org/en)
 
