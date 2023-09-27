@@ -1,6 +1,6 @@
 # :: Header
   FROM 11notes/node:stable
-  ENV APP_VERSION=13.4.13
+  ENV APP_VERSION=13.5.3
   ENV APP_ROOT=/next
   ENV APP_ROOT_JS=${APP_ROOT}/js
 

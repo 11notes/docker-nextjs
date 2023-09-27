@@ -1,4 +1,6 @@
 # Alpine :: Nextjs
+![size](https://img.shields.io/docker/image-size/11notes/nextjs/13.5.3?color=0eb305) ![version](https://img.shields.io/docker/v/11notes/nextjs?color=eb7a09) ![pulls](https://img.shields.io/docker/pulls/11notes/nextjs?color=2b75d6) ![activity](https://img.shields.io/github/commit-activity/m/11notes/docker-nextjs?color=c91cb8) ![commit-last](https://img.shields.io/github/last-commit/11notes/docker-nextjs?color=c91cb8)
+
 Run Nextjs based on Alpine Linux. Small, lightweight, secure and fast 🏔️
 
 ## Volumes
@@ -33,10 +35,10 @@ docker run --name nextjs \
 | `gid` | 1000 | group id 1000 |
 | `home` | /next | home directory of user docker |
 
-## Parent
+## Parent Image
 * [11notes/node:stable](https://github.com/11notes/docker-node)
 
-## Build with
+## Built with and thanks to
 * [nextjs](https://nextjs.org)
 * [React Redux](https://react-redux.js.org)
 * [Web3](https://www.npmjs.com/package/web3)
@@ -49,5 +51,5 @@ docker run --name nextjs \
 
 ## Tips
 * Use [11notes/nextjs-cluster](https://github.com/11notes/docker-nextjs-cluster) to run the build output in a cluster on a single or multiple hosts
-* Don't bind to ports < 1024 (requires root), use NAT/reverse proxy
-* [Permanent Storage](https://github.com/11notes/alpine-docker-netshare) - Module to store permanent container data via NFS/CIFS and more
+* Only use rootless container runtime (podman, rootless docker)
+* Don't bind to ports < 1024 (requires root), use NAT/reverse proxy (haproxy, traefik, nginx)
