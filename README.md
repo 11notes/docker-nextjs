@@ -1,5 +1,5 @@
 # Alpine :: Nextjs
-![size](https://img.shields.io/docker/image-size/11notes/nextjs/13.5.6?color=0eb305) ![version](https://img.shields.io/docker/v/11notes/nextjs?color=eb7a09) ![pulls](https://img.shields.io/docker/pulls/11notes/nextjs?color=2b75d6) ![activity](https://img.shields.io/github/commit-activity/m/11notes/docker-nextjs?color=c91cb8) ![commit-last](https://img.shields.io/github/last-commit/11notes/docker-nextjs?color=c91cb8)
+![size](https://img.shields.io/docker/image-size/11notes/nextjs/14.0.0?color=0eb305) ![version](https://img.shields.io/docker/v/11notes/nextjs?color=eb7a09) ![pulls](https://img.shields.io/docker/pulls/11notes/nextjs?color=2b75d6) ![activity](https://img.shields.io/github/commit-activity/m/11notes/docker-nextjs?color=c91cb8) ![commit-last](https://img.shields.io/github/last-commit/11notes/docker-nextjs?color=c91cb8)
 
 Run Nextjs based on Alpine Linux. Small, lightweight, secure and fast 🏔️
 
@@ -37,11 +37,11 @@ docker run --name nextjs \
 | `gid` | 1000 | group id 1000 |
 | `home` | /next | home directory of user docker |
 
-## Parent Image
+## Parent image
 * [11notes/node:stable](https://github.com/11notes/docker-node)
 
 ## Built with and thanks to
-* [nextjs](https://nextjs.org)
+* [NextJS](https://nextjs.org)
 * [React Redux](https://react-redux.js.org)
 * [Web3](https://www.npmjs.com/package/web3)
 * [Iconify](https://docs.iconify.design/icon-components/react)
