@@ -1,0 +1,11 @@
+image: 11notes/nextjs:14.1.0
+manifests:
+  - image: 11notes/nextjs:amd64-14.1.0
+    platform:
+      architecture: amd64
+      os: linux
+  - image: 11notes/nextjs:arm64v8-14.1.0
+    platform:
+      architecture: arm64
+      os: linux
+      variant: v8
