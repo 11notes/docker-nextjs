@@ -1,11 +1,9 @@
 # :: Arch
-  FROM alpine AS qemu
-  ENV QEMU_URL https://github.com/balena-io/qemu/releases/download/v3.0.0%2Bresin/qemu-3.0.0+resin-aarch64.tar.gz
-  RUN apk add curl && curl -L ${QEMU_URL} | tar zxvf - -C . && mv qemu-3.0.0+resin-aarch64/qemu-aarch64-static .
+  FROM multiarch/qemu-user-static:x86_64-aarch64 as qemu
 
 # :: Header
   FROM 11notes/node:arm64v8-stable
-  COPY --from=qemu qemu-aarch64-static /usr/bin
+  COPY --from=qemu /usr/bin/qemu-aarch64-static /usr/bin
   ENV APP_VERSION=14.1.0
   ENV APP_ROOT=/next
   ENV APP_ROOT_JS=${APP_ROOT}/js
@@ -30,7 +28,7 @@
         --import-alias \
         --use-npm; \
       cd ${APP_ROOT_JS}; \
-      sed -i "s@next build@next build \&\& /usr/bin/rsync -az --delete ${APP_ROOT_JS}/.next/standalone/ ${APP_ROOT_JS}/build/" ${APP_ROOT_JS}/package.json; \
+      sed -i "s@next build@next build \&\& /usr/bin/rsync -az --delete ${APP_ROOT_JS}/.next/standalone/ ${APP_ROOT_JS}/build@" ${APP_ROOT_JS}/package.json; \
       npm --save install \
         react-redux \
         react-icons \
